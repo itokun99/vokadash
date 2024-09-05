@@ -18,7 +18,7 @@ export default defineConfig(({ command }) => {
   } else {
     // Build config
     return {
-      plugins: [react(), dts()],
+      plugins: [react(), dts(), tsconfigPaths()],
       build: {
         lib: {
           entry: path.resolve(__dirname, "src/index.ts"),
