@@ -1,5 +1,5 @@
 import { Vokadash } from "../src/index";
-import { Circle } from "lucide-react";
+import { Circle, Settings, User2 } from "lucide-react";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -12,7 +12,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: "Test",
+        element: <div>Dashboard</div>,
+      },
+      {
+        path: "setting",
+        element: <div>Setting</div>,
       },
     ],
   },
@@ -23,9 +27,31 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     appName="Vokadash 0.0.1"
     menus={[
       {
-        title: "Test",
+        title: "Menu Staff 123",
         url: "/",
-        icon: Circle,
+        icon: User2,
+        items: [
+          {
+            title: "Dashboard",
+            url: "/",
+            icon: User2,
+          },
+          {
+            title: "Cuti",
+            url: "/cuti",
+            icon: User2,
+          },
+          {
+            title: "Lembur",
+            url: "/lembur",
+            icon: User2,
+          },
+        ],
+      },
+      {
+        title: "Setting",
+        url: "/setting",
+        icon: Settings,
       },
     ]}
     usermenus={[

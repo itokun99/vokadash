@@ -4,10 +4,9 @@ import {
 } from "@/features/_global/libs/shadcn/components/ui/sheet";
 import React from "react";
 import { Brand } from "./_components/Brand";
-import { Nav } from "./_components/Nav";
-// import { Footer } from "./_components/Footer";
 import { Trigger } from "./_components/Trigger";
 import { SidebarProps } from "../types";
+import { Nav } from "../_components/Nav";
 
 export const SheetSidebar = React.memo((props: SidebarProps) => {
   return (

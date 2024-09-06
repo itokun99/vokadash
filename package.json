@@ -1,12 +1,16 @@
 {
   "name": "@itokun99/vokadash",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vokadash Admin App Scaffold",
   "author": {
     "name": "Indrawan Lisanto",
-    "email": "itodev@proton.me",
-    "url": "https://bento.me/itodev"
+    "email": "indrawanlisantopersonal@gmail.com",
+    "url": "https://github.com/itokun99/vokadash"
   },
+  "repository": {
+    "url": "https://github.com/itokun99/vokadash"
+  },
+  "private": false,
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -26,18 +30,19 @@
     "build": "tsc -b && vite build --config vite.config.ts"
   },
   "peerDependencies": {
+    "@tanstack/react-query": ">=5",
+    "lucide-react": ">=0.430",
     "react": ">=18",
     "react-dom": ">=18",
     "react-router-dom": ">=6"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-dropdown-menu": "^2.1.1",
     "@radix-ui/react-slot": "^1.1.0",
-    "@tanstack/react-query": "^5.53.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.437.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },
