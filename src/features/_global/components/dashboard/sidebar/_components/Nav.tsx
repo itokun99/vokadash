@@ -19,7 +19,7 @@ const NavItem = React.memo((props: NavItemProps) => {
         to={props.url || "#"}
         className={(p) =>
           cn(
-            "flex gap-3 px-3 py-2 items-center rounded-lg border-none hover:bg-muted-foreground/10",
+            "flex gap-3 px-3 py-2 mb-4 items-center rounded-lg border-none hover:bg-muted-foreground/10",
             p.isActive && "bg-muted-foreground/10",
           )
         }
@@ -33,7 +33,7 @@ const NavItem = React.memo((props: NavItemProps) => {
 
   return (
     <AccordionItem value={String(props.value)} className="border-none">
-      <AccordionTrigger className="hover:no-underline py-2 border-none hover:bg-muted-foreground/10 rounded-lg mb-2 px-3">
+      <AccordionTrigger className="hover:no-underline py-2 border-none hover:bg-muted-foreground/10 rounded-lg mb-4 px-3">
         <div className="flex gap-3">
           {props.icon && <Icon iconName={props.icon} className="h-4 w-4" />}
           {props.title}

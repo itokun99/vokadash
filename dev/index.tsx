@@ -31,21 +31,46 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     appName="Vokadash 0.0.1"
     menus={[
       {
-        title: "Menu Staff 123",
+        title: "Dashboard",
         url: "/",
-        icon: "User2",
+        icon: "LayoutDashboard",
+      },
+      {
+        title: "Manajement Absensi",
+        url: "",
+        icon: "Sheet",
         items: [
           {
-            title: "Dashboard",
-            url: "/",
-            icon: "LayoutDashboard",
+            title: "Kalender",
+            url: "",
+            icon: "Calendar",
+          },
+          {
+            title: "Kehadiran",
+            url: "/attendance",
+            icon: "UserPen",
+          },
+          {
+            title: "Cuti",
+            url: "/leave",
+            icon: "LogOut",
+          },
+          {
+            title: "Lembur",
+            url: "/overtime",
+            icon: "Clock3",
           },
         ],
       },
       {
-        title: "Setting",
-        url: "/setting",
-        icon: "Settings2",
+        title: "Penilaian",
+        url: "#",
+        icon: "Pencil",
+      },
+      {
+        title: "Surat Menyurat",
+        url: "#",
+        icon: "Paperclip",
       },
     ]}
     usermenus={[
