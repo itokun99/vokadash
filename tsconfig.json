@@ -17,5 +17,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*", "dev/**/*"]
+  "include": ["src/**/*", "dev/**/*"],
+  "exclude": ["dev/**/*"]
 }

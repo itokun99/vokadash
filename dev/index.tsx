@@ -1,9 +1,9 @@
-import { Vokadash } from "../src/index";
-import { Circle, Settings, User2 } from "lucide-react";
+import { Settings, User2 } from "lucide-react";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { RootView } from "./views/root";
+import { Vokadash } from "@/index";
 
 const router = createBrowserRouter([
   {
