@@ -3,12 +3,13 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { RootView } from "./views/root";
 import { AuthLayout } from "@/features/auth";
-import { Vokadash } from "@/index";
+import { Default404, Vokadash } from "@/index";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootView />,
+    errorElement: <Default404 />,
     children: [
       {
         path: "",
