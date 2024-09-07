@@ -8,10 +8,9 @@ import {
   AccordionTrigger,
 } from "@/features/_global/libs/shadcn/components/ui/accordion";
 import { NavItemProps, NavProps } from "../types";
+import { Icon } from "@/features/_global";
 
 const NavItem = React.memo((props: NavItemProps) => {
-  const Icon = props.icon;
-
   const hasChild = props.items && props.items?.length > 0;
 
   if (!hasChild) {
@@ -26,7 +25,7 @@ const NavItem = React.memo((props: NavItemProps) => {
         }
         end
       >
-        {props.icon && Icon && <Icon className="h-4 w-4" />}
+        {props.icon && <Icon iconName={props.icon} className="h-4 w-4" />}
         {props.title}
       </NavLink>
     );
@@ -36,14 +35,13 @@ const NavItem = React.memo((props: NavItemProps) => {
     <AccordionItem value={String(props.value)} className="border-none">
       <AccordionTrigger className="hover:no-underline py-2 border-none hover:bg-muted-foreground/10 rounded-lg mb-2 px-3">
         <div className="flex gap-3">
-          {Icon && <Icon className="h-4 w-4" />}
+          {props.icon && <Icon iconName={props.icon} className="h-4 w-4" />}
           {props.title}
         </div>
       </AccordionTrigger>
       {hasChild && (
         <AccordionContent className="bg-mute pl-4">
           {props.items?.map((item, i) => {
-            const C = item.icon;
             return (
               <NavLink
                 key={i}
@@ -55,7 +53,7 @@ const NavItem = React.memo((props: NavItemProps) => {
                   )
                 }
               >
-                {item.icon && C && <C className="h-4 w-4" />}
+                {item.icon && <Icon iconName={item.icon} className="h-4 w-4" />}
                 {item.title}
               </NavLink>
             );

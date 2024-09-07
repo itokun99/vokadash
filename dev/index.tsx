@@ -1,8 +1,8 @@
-import { Settings, User2 } from "lucide-react";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { RootView } from "./views/root";
+import { AuthLayout } from "@/features/auth";
 import { Vokadash } from "@/index";
 
 const router = createBrowserRouter([
@@ -20,6 +20,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/login",
+    element: <AuthLayout />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -29,29 +33,19 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       {
         title: "Menu Staff 123",
         url: "/",
-        icon: User2,
+        icon: "User2",
         items: [
           {
             title: "Dashboard",
             url: "/",
-            icon: User2,
-          },
-          {
-            title: "Cuti",
-            url: "/cuti",
-            icon: User2,
-          },
-          {
-            title: "Lembur",
-            url: "/lembur",
-            icon: User2,
+            icon: "LayoutDashboard",
           },
         ],
       },
       {
         title: "Setting",
         url: "/setting",
-        icon: Settings,
+        icon: "Settings2",
       },
     ]}
     usermenus={[

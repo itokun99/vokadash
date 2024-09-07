@@ -1,8 +1,9 @@
+import { IconProps } from "@/features/_global";
 import { To } from "react-router-dom";
 
 export interface NavItemProps {
   title?: string;
-  icon?: React.ElementType;
+  icon?: IconProps["iconName"];
   url?: To;
   value?: number | string;
   items?: NavItemProps[];

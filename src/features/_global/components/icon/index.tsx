@@ -3,6 +3,7 @@ import * as icons from "lucide-react";
 
 export interface IconProps {
   iconName: keyof typeof icons;
+  className?: string;
 }
 
 export const Icon = React.memo((props: IconProps) => {
