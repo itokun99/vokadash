@@ -23,7 +23,7 @@ export const DashboardEmptyData = React.memo(
             props.button
           ) : props.actionTitle ? (
             <Button onClick={props.onActionClick} className="mt-4">
-              Add Product
+              {props.actionTitle}
             </Button>
           ) : null}
         </div>

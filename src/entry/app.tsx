@@ -12,14 +12,22 @@ export interface VokadashProps extends PropsWithChildren {
   usermenus: DashboardLayoutProps["usermenus"];
 }
 
-export const Vokadash = React.memo(
+const VokadashWithContext = React.memo(
   ({ menus, usermenus, children, appName }: VokadashProps) => {
     return (
       <VokadashContext.Provider value={{ appName, menus, usermenus }}>
-        <VokadashQueryProvider>{children}</VokadashQueryProvider>
+        {children}
       </VokadashContext.Provider>
     );
   },
 );
 
-Vokadash.displayName = "Vokadash";
+VokadashWithContext.displayName = "VokadashWithContext";
+
+export const Vokadash = React.memo((props: VokadashProps) => {
+  return (
+    <VokadashQueryProvider>
+      <VokadashWithContext {...props} />
+    </VokadashQueryProvider>
+  );
+});
