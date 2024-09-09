@@ -1,7 +1,8 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, useState } from "react";
 import { Sidebar } from "./sidebar";
 import { SidebarProps } from "./sidebar/types";
 import { UserMenu, UserMenuProps } from "./usermenu";
+import { SidebarContext } from "../../context";
 
 export interface DashboardLayoutProps extends PropsWithChildren {
   menus: SidebarProps["menus"];
@@ -10,12 +11,21 @@ export interface DashboardLayoutProps extends PropsWithChildren {
 
 export const DashboardLayout = React.memo(
   ({ menus = [], usermenus, children }: DashboardLayoutProps) => {
+    const [sidebarVisible, setSidebarVisible] = useState(false);
+
     return (
       <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
         <Sidebar.Default menus={menus} />
         <div className="flex flex-col">
           <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
-            <Sidebar.Sheet menus={menus} />
+            <SidebarContext.Provider
+              value={{
+                visible: sidebarVisible,
+                setVisible: () => setSidebarVisible((v) => !v),
+              }}
+            >
+              <Sidebar.Sheet menus={menus} />
+            </SidebarContext.Provider>
             <div className="w-full flex-1">
               {/* <form> */}
               {/*   <div className="relative"> */}

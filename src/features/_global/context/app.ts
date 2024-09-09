@@ -12,4 +12,17 @@ const vokadashContextDefaultValue: VokadashContextValue = {
   menus: [],
   usermenus: [],
 };
+
 export const VokadashContext = createContext(vokadashContextDefaultValue);
+
+export interface SidebarContextValue {
+  visible: boolean;
+  setVisible: () => void;
+}
+
+const sidebarContextDefaultValue: SidebarContextValue = {
+  visible: false,
+  setVisible: () => {},
+};
+
+export const SidebarContext = createContext(sidebarContextDefaultValue);
