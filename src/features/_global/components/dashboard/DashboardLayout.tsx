@@ -1,8 +1,9 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, useState } from "react";
 import { Sidebar } from "./sidebar";
 import { SidebarProps } from "./sidebar/types";
 import { UserMenu, UserMenuProps } from "./usermenu";
 import { cn } from "../../libs";
+import { SidebarContext } from "../../context";
 
 export interface DashboardLayoutProps extends PropsWithChildren {
   menus: SidebarProps["menus"];

@@ -1,5 +1,5 @@
 import { cn } from "@/features/_global/libs/shadcn/lib/utils";
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import {
   Accordion,
@@ -8,14 +8,17 @@ import {
   AccordionTrigger,
 } from "@/features/_global/libs/shadcn/components/ui/accordion";
 import { NavItemProps, NavProps } from "../types";
-import { Icon } from "@/features/_global";
+import { Icon, SidebarContext } from "@/features/_global";
 
 const NavItem = React.memo((props: NavItemProps) => {
+  const sidebarContext = useContext(SidebarContext);
+
   const hasChild = props.items && props.items?.length > 0;
 
   if (!hasChild) {
     return (
       <NavLink
+        onClick={sidebarContext.setVisible}
         to={props.url || "#"}
         className={(p) =>
           cn(
@@ -45,6 +48,7 @@ const NavItem = React.memo((props: NavItemProps) => {
             return (
               <NavLink
                 key={i}
+                onClick={sidebarContext.setVisible}
                 to={item.url || "#"}
                 className={(p) =>
                   cn(
@@ -64,7 +68,7 @@ const NavItem = React.memo((props: NavItemProps) => {
   );
 });
 
-export const Nav = React.memo(({ items = [] }: NavProps) => {
+export const Nav = React.memo(({ items = [], mobile = false }: NavProps) => {
   return (
     <Accordion
       type="single"
@@ -73,7 +77,7 @@ export const Nav = React.memo(({ items = [] }: NavProps) => {
       defaultValue="0"
     >
       {items?.map((item, i) => {
-        return <NavItem {...item} key={i} value={i} />;
+        return <NavItem {...item} key={i} value={i} mobile={mobile} />;
       })}
     </Accordion>
   );

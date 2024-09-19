@@ -9,10 +9,9 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootView />,
-    errorElement: <Default404 />,
     children: [
       {
-        path: "",
+        path: "/",
         element: <div>Dashboard</div>,
       },
       {

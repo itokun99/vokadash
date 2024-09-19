@@ -7,9 +7,11 @@ export interface NavItemProps {
   url?: To;
   value?: number | string;
   items?: NavItemProps[];
+  mobile?: boolean;
 }
 
 export interface NavProps {
+  mobile?: boolean;
   items: NavItemProps[];
   className?: string;
 }
