@@ -2,20 +2,28 @@ import React, { PropsWithChildren } from "react";
 import { Sidebar } from "./sidebar";
 import { SidebarProps } from "./sidebar/types";
 import { UserMenu, UserMenuProps } from "./usermenu";
+import { cn } from "../../libs";
 
 export interface DashboardLayoutProps extends PropsWithChildren {
   menus: SidebarProps["menus"];
   usermenus: UserMenuProps["menus"];
+  sidebarClassName?: string;
+  headerClassName?: string;
 }
 
 export const DashboardLayout = React.memo(
-  ({ menus = [], usermenus, children }: DashboardLayoutProps) => {
+  ({ menus = [], usermenus, children, ...props }: DashboardLayoutProps) => {
     return (
       <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
-        <Sidebar.Default menus={menus} />
+        <Sidebar.Default menus={menus} className={props.sidebarClassName} />
         <div className="flex flex-col">
-          <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
-            <Sidebar.Sheet menus={menus} />
+          <header
+            className={cn(
+              "flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6",
+              props.headerClassName,
+            )}
+          >
+            <Sidebar.Sheet className={props.sidebarClassName} menus={menus} />
             <div className="w-full flex-1">
               {/* <form> */}
               {/*   <div className="relative"> */}

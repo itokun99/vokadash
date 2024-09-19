@@ -11,8 +11,10 @@ export interface NavItemProps {
 
 export interface NavProps {
   items: NavItemProps[];
+  className?: string;
 }
 
 export interface SidebarProps {
   menus: NavProps["items"];
+  className?: string;
 }
