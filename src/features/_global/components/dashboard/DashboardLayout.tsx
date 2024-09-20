@@ -14,6 +14,8 @@ export interface DashboardLayoutProps extends PropsWithChildren {
 
 export const DashboardLayout = React.memo(
   ({ menus = [], usermenus, children, ...props }: DashboardLayoutProps) => {
+    const [sidebarVisible, setSidebarVisible] = useState(false);
+
     return (
       <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
         <Sidebar.Default menus={menus} className={props.sidebarClassName} />
@@ -24,7 +26,14 @@ export const DashboardLayout = React.memo(
               props.headerClassName,
             )}
           >
-            <Sidebar.Sheet className={props.sidebarClassName} menus={menus} />
+            <SidebarContext.Provider
+              value={{
+                visible: sidebarVisible,
+                setVisible: () => setSidebarVisible((v) => !v),
+              }}
+            >
+              <Sidebar.Sheet className={props.sidebarClassName} menus={menus} />
+            </SidebarContext.Provider>
             <div className="w-full flex-1">
               {/* <form> */}
               {/*   <div className="relative"> */}
