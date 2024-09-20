@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { RootView } from "./views/root";
 import { AuthLayout } from "@/features/auth";
-import { Default404, Vokadash } from "@/index";
+import { Vokadash } from "@/index";
+// import { useToast } from "@/features/_global/libs/shadcn/hooks/use-toast";
+
+const Dashboard = () => {
+  // const toaster = useToast();
+
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     toaster.toast({
+  //       title: "Test",
+  //       description: "ini toast dari toaster",
+  //     });
+  //   }, 2000);
+  // });
+  return <div>Dashboard</div>;
+};
 
 const router = createBrowserRouter([
   {
@@ -12,7 +27,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <div>Dashboard</div>,
+        element: <Dashboard />,
       },
       {
         path: "setting",

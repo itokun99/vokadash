@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from "react";
 import "../core/assets/styles/index.css";
 import {
   DashboardLayoutProps,
+  Toaster,
   VokadashContext,
   VokadashQueryProvider,
 } from "@/features/_global";
@@ -17,6 +18,7 @@ const VokadashWithContext = React.memo(
     return (
       <VokadashContext.Provider value={{ appName, menus, usermenus }}>
         {children}
+        <Toaster />
       </VokadashContext.Provider>
     );
   },
