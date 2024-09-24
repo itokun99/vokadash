@@ -17,9 +17,9 @@ export const SheetSidebar = React.memo((props: SidebarProps) => {
       <SheetContent
         onPressClose={sidebarContext.setVisible}
         side="left"
-        className="flex flex-col"
+        className=" sidebar sidebar-sheet sidebar-sheet-content flex flex-col"
       >
-        <nav className="grid gap-2 text-lg font-medium">
+        <nav className=" sidebar-content-wrapper grid gap-2 text-lg font-medium">
           <Brand />
           <Nav items={props.menus} mobile />
         </nav>

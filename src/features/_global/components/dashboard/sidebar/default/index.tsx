@@ -7,9 +7,13 @@ import { cn } from "@/features/_global/libs";
 export const DefaultSidebar = React.memo((props: SidebarProps) => {
   return (
     <div
-      className={cn("hidden border-r bg-muted/40 md:block", props.className)}
+      className={cn(
+        "sidebar sidebar-default",
+        "hidden border-r bg-muted/40 md:block",
+        props.className,
+      )}
     >
-      <div className="flex h-full max-h-screen flex-col gap-2">
+      <div className=" sidebar-content flex h-full max-h-screen flex-col gap-2">
         <Brand />
         <Nav items={props.menus} />
       </div>

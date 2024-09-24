@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 export const Brand = React.memo(() => {
   const appContext = useVokadashContext();
   return (
-    <Link to="#" className="flex items-center gap-2 text-lg font-semibold">
+    <Link
+      to="#"
+      className="sidebar-brand sidebar-brand-logo flex items-center gap-2 text-lg font-semibold"
+    >
       <Package2 className="h-6 w-6" />
       <span className="sr-only">{appContext.appName}</span>
     </Link>
