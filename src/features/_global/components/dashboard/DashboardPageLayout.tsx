@@ -1,9 +1,9 @@
 import React, { PropsWithChildren } from "react";
-import { Breadcrumbs, BreadcrumbsProps } from "../breadcrumbs";
+import { CustomBreadcrumbs, CustomBreadcrumbsProps } from "../breadcrumbs";
 
 export interface DashboardPageLayoutProps extends PropsWithChildren {
   title?: string;
-  breadcrumbs?: BreadcrumbsProps["items"];
+  breadcrumbs?: CustomBreadcrumbsProps["items"];
 }
 
 export const DashboardPageLayout = React.memo(
@@ -12,7 +12,7 @@ export const DashboardPageLayout = React.memo(
       <div className="dashboard-page-layout">
         {breadcrumbs?.length > 0 && (
           <div>
-            <Breadcrumbs items={breadcrumbs} />
+            <CustomBreadcrumbs items={breadcrumbs} />
           </div>
         )}
         {title && (

@@ -2,16 +2,16 @@ import { ChevronRight, Home } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 
-export interface BreadcrumbItem {
+export interface CustomBreadcrumbItem {
   label: string;
   url: string;
 }
 
-export interface BreadcrumbsProps {
-  items?: BreadcrumbItem[];
+export interface CustomBreadcrumbsProps {
+  items?: CustomBreadcrumbItem[];
 }
 
-export function Breadcrumbs({ items = [] }: BreadcrumbsProps) {
+export function CustomBreadcrumbs({ items = [] }: CustomBreadcrumbsProps) {
   if (items.length === 0) {
     return null;
   }
