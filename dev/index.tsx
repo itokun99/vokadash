@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { RootView } from "./views/root";
 import { AuthLayout } from "@/features/auth";
-import { Vokadash } from "@/index";
+import { DashboardPageLayout, Vokadash } from "@/index";
 // import { useToast } from "@/features/_global/libs/shadcn/hooks/use-toast";
 
 const Dashboard = () => {
@@ -17,7 +17,17 @@ const Dashboard = () => {
   //     });
   //   }, 2000);
   // });
-  return <div>Dashboard</div>;
+  return (
+    <DashboardPageLayout
+      title="test"
+      breadcrumbs={[
+        { label: "Manajemen Absensi", url: "/" },
+        { label: "Test", url: "/test" },
+      ]}
+    >
+      test
+    </DashboardPageLayout>
+  );
 };
 
 const router = createBrowserRouter([
