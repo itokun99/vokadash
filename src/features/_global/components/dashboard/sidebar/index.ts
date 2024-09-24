@@ -5,3 +5,5 @@ export const Sidebar = {
   Default: DefaultSidebar,
   Sheet: SheetSidebar,
 };
+
+export * from "./types";

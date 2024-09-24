@@ -1,15 +1,11 @@
 {
   "name": "@itokun99/vokadash",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Vokadash Admin App Scaffold",
   "homepage": "https://github/itokun99/vokadash",
-  "author": {
-    "name": "Indrawan Lisanto",
-    "email": "indrawanlisantopersonal@gmail.com",
-    "url": "https://github.com/itokun99/vokadash"
-  },
+  "author": "Indrawan Lisanto <indrawanlisantopersonal@gmail.com> (https://github.com/itokun99/vokadash)",
   "repository": {
-    "url": "https://github.com/itokun99/vokadash",
+    "url": "git+https://github.com/itokun99/vokadash.git",
     "type": "git"
   },
   "private": false,
@@ -92,5 +88,8 @@
     "vite": "^5.4.3",
     "vite-plugin-dts": "^4.1.1",
     "vite-tsconfig-paths": "^5.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/itokun99/vokadash/issues"
   }
 }
