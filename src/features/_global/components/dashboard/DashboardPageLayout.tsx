@@ -9,7 +9,7 @@ export interface DashboardPageLayoutProps extends PropsWithChildren {
 export const DashboardPageLayout = React.memo(
   ({ title, children, breadcrumbs = [] }: DashboardPageLayoutProps) => {
     return (
-      <div className="dashboard-page-layout">
+      <div className="dashboard-page-layout flex flex-1">
         {breadcrumbs?.length > 0 && (
           <div>
             <CustomBreadcrumbs items={breadcrumbs} />
