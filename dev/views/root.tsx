@@ -1,4 +1,4 @@
-import { DashboardLayout, useVokadashContext } from "@/index";
+import { AuthLayout, DashboardLayout, useVokadashContext } from "@/index";
 import React from "react";
 import { Outlet } from "react-router-dom";
 
@@ -9,5 +9,13 @@ export const RootView = () => {
     <DashboardLayout menus={appContext.menus} usermenus={appContext.usermenus}>
       <Outlet />
     </DashboardLayout>
+  );
+};
+
+export const AuthView = () => {
+  return (
+    <AuthLayout>
+      <Outlet />
+    </AuthLayout>
   );
 };

@@ -7,6 +7,7 @@ export interface AuthLayoutProps extends PropsWithChildren {
   title?: string;
   description?: string;
   image?: string;
+  logo?: string;
 }
 
 export const AuthLayout = ({
@@ -14,11 +15,18 @@ export const AuthLayout = ({
   title,
   children,
   image,
+  logo,
 }: AuthLayoutProps) => {
   return (
     <div className="w-full lg:grid lg:grid-cols-2 min-h-screen ">
       <div className="flex items-center justify-center py-12">
-        <div className="mx-auto grid w-[350px] gap-6">
+        <div className="mx-auto grid w-[350px] gap-6 px-4">
+          {logo && (
+            <div className="w-full flex-1">
+              <img className="w-full" src={logo} />
+            </div>
+          )}
+
           <div className="grid gap-2 text-center">
             <h1 className="text-3xl font-bold">{title}</h1>
             <p className="text-balance text-muted-foreground">{description}</p>
