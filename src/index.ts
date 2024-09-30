@@ -4,5 +4,6 @@ export * from "react-helmet-async";
 export * from "@radix-ui/react-icons";
 export * from "@/features/_global";
 export * from "@/features/auth";
+export * from "@/features/theme";
 export * from "@/features/notfound";
 export * from "@/entry";

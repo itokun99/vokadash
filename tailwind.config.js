@@ -14,6 +14,21 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        "theme-color-white": "var(--theme-color-white)",
+        "theme-color-black": "var(--theme-color-black)",
+        "theme-color-primary": "var(--theme-color-primary)",
+        "theme-color-secondary": "var(--theme-color-secondary)",
+        "theme-color-secondary2": "var(--theme-color-secondary2)",
+        "theme-color-secondary3": "var(--theme-color-secondary3)",
+        "theme-color-danger": "var(--theme-color-danger)",
+        "theme-color-success": "var(--theme-color-success)",
+        "theme-color-info": "var(--theme-color-info)",
+        "theme-color-warning": "var(--theme-color-warning)",
+        "theme-color-gray": "var(--theme-color-gray)",
+        "theme-color-border": "var(--theme-color-border)",
+        "theme-color-light": "var(--theme-color-light)",
+        "theme-color-dark": "var(--theme-color-dark)",
+
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

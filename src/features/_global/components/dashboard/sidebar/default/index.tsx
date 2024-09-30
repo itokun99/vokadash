@@ -9,7 +9,7 @@ export const DefaultSidebar = React.memo((props: SidebarProps) => {
     <div
       className={cn(
         "sidebar sidebar-default",
-        "hidden border-r bg-muted/40 md:block",
+        "hidden border-r bg-theme-color-secondary3 md:block",
         props.className,
       )}
     >

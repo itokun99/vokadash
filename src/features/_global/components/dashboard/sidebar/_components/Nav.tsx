@@ -22,8 +22,8 @@ const NavItem = React.memo((props: NavItemProps) => {
         to={props.url || "#"}
         className={(p) =>
           cn(
-            " sidebar-nav-item flex gap-3 px-3 py-2 mb-4 items-center rounded-lg border-none hover:bg-muted-foreground/10",
-            p.isActive && "bg-muted-foreground/10",
+            " sidebar-nav-item flex gap-3 px-3 py-2 mb-4 items-center rounded-lg border-none hover:bg-theme-color-info",
+            p.isActive && "bg-theme-color-info",
           )
         }
         end
@@ -44,7 +44,7 @@ const NavItem = React.memo((props: NavItemProps) => {
       value={String(props.value)}
       className="sidebar-nav-accordion border-none"
     >
-      <AccordionTrigger className="sidebar-nav-accordion-trigger hover:no-underline py-2 border-none hover:bg-muted-foreground/10 rounded-lg mb-4 px-3">
+      <AccordionTrigger className="sidebar-nav-accordion-trigger hover:no-underline py-2 border-none hover:bg-theme-color-info rounded-lg mb-4 px-3">
         <div className="flex gap-3">
           {props.icon && (
             <Icon
@@ -65,8 +65,8 @@ const NavItem = React.memo((props: NavItemProps) => {
                 to={item.url || "#"}
                 className={(p) =>
                   cn(
-                    "sidebar-nav-item flex items-center px-3 py-2 mb-2 rounded-lg hover:bg-muted-foreground/10 duration-200 gap-4",
-                    p.isActive && "bg-muted-foreground/10",
+                    "sidebar-nav-item flex items-center px-3 py-2 mb-2 rounded-lg hover:bg-theme-color-info duration-200 gap-4",
+                    p.isActive && "bg-theme-color-info",
                   )
                 }
               >

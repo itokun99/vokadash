@@ -22,7 +22,7 @@ export const DashboardLayout = React.memo(
         <div className="sidebar-content flex flex-col overflow-auto">
           <header
             className={cn(
-              "sidebar-header flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6",
+              "sidebar-header flex h-14 items-center gap-4 border-b bg-theme-color-secondary3 px-4 lg:h-[60px] lg:px-6",
               props.headerClassName,
             )}
           >
