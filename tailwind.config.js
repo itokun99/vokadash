@@ -14,20 +14,62 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        "theme-color-white": "var(--theme-color-white)",
-        "theme-color-black": "var(--theme-color-black)",
-        "theme-color-primary": "var(--theme-color-primary)",
-        "theme-color-secondary": "var(--theme-color-secondary)",
-        "theme-color-secondary2": "var(--theme-color-secondary2)",
-        "theme-color-secondary3": "var(--theme-color-secondary3)",
-        "theme-color-danger": "var(--theme-color-danger)",
-        "theme-color-success": "var(--theme-color-success)",
-        "theme-color-info": "var(--theme-color-info)",
-        "theme-color-warning": "var(--theme-color-warning)",
-        "theme-color-gray": "var(--theme-color-gray)",
-        "theme-color-border": "var(--theme-color-border)",
-        "theme-color-light": "var(--theme-color-light)",
-        "theme-color-dark": "var(--theme-color-dark)",
+        "theme-color-white": {
+          DEFAULT: "hsl(var(--theme-color-white))",
+          foreground: "hsl(var(--theme-color-white))",
+        },
+        "theme-color-black": {
+          DEFAULT: "hsl(var(--theme-color-black))",
+          foreground: "hsl(var(--theme-color-black))",
+        },
+        "theme-color-primary": {
+          DEFAULT: "hsl(var(--theme-color-primary))",
+          foreground: "hsl(var(--theme-color-primary))",
+        },
+        "theme-color-secondary": {
+          DEFAULT: "hsl(var(--theme-color-secondary))",
+          foreground: "hsl(var(--theme-color-secondary))",
+        },
+        "theme-color-secondary2": {
+          DEFAULT: "hsl(var(--theme-color-secondary2))",
+          foreground: "hsl(var(--theme-color-secondary2))",
+        },
+        "theme-color-secondary3": {
+          DEFAULT: "hsl(var(--theme-color-secondary3))",
+          foreground: "hsl(var(--theme-color-secondary3))",
+        },
+        "theme-color-danger": {
+          DEFAULT: "hsl(var(--theme-color-danger))",
+          foreground: "hsl(var(--theme-color-danger))",
+        },
+        "theme-color-success": {
+          DEFAULT: "hsl(var(--theme-color-success))",
+          foreground: "hsl(var(--theme-color-success))",
+        },
+        "theme-color-info": {
+          DEFAULT: "hsl(var(--theme-color-info))",
+          foreground: "hsl(var(--theme-color-info))",
+        },
+        "theme-color-warning": {
+          DEFAULT: "hsl(var(--theme-color-warning))",
+          foreground: "hsl(var(--theme-color-warning))",
+        },
+        "theme-color-gray": {
+          DEFAULT: "hsl(var(--theme-color-gray))",
+          foreground: "hsl(var(--theme-color-gray))",
+        },
+        "theme-color-border": {
+          DEFAULT: "hsl(var(--theme-color-border))",
+          foreground: "hsl(var(--theme-color-border))",
+        },
+        "theme-color-light": {
+          DEFAULT: "hsl(var(--theme-color-light))",
+          foreground: "hsl(var(--theme-color-light))",
+        },
+        "theme-color-dark": {
+          DEFAULT: "hsl(var(--theme-color-dark))",
+          foreground: "hsl(var(--theme-color-dark))",
+        },
 
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

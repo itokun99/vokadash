@@ -6,8 +6,9 @@ import React, {
   useState,
 } from "react";
 import { ThemeContextValue, ThemeContext } from "../contexts";
-import { RAW_COLORS } from "../utils";
+import { hexToHSL, RAW_COLORS } from "../utils";
 import { jsonHelper } from "@/features/_global";
+import { RawColors } from "../types";
 
 export interface ThemeProviderProps extends PropsWithChildren {
   colors: ThemeContextValue["colors"];
@@ -25,8 +26,20 @@ const generateCssVariables = (colors: ThemeContextValue["colors"]) => {
   }
 };
 
+const mapHslColor = (colors: RawColors) => {
+  const hslObj: RawColors = {};
+  Object.keys(colors)?.forEach((key) => {
+    if (colors[key as keyof typeof colors]) {
+      hslObj[key as keyof typeof hslObj] = hexToHSL(
+        colors[key as keyof typeof colors] as string,
+      );
+    }
+  });
+  return hslObj;
+};
+
 export const ThemeProvider = React.memo((props: ThemeProviderProps) => {
-  const [colors, setColors] = useState(props.colors || RAW_COLORS);
+  const [colors, setColors] = useState(mapHslColor(props.colors || RAW_COLORS));
   const colorRef = useRef(colors);
   colorRef.current = colors;
   const colorJson = useMemo(() => JSON.stringify(props.colors), [props.colors]);
@@ -36,7 +49,10 @@ export const ThemeProvider = React.memo((props: ThemeProviderProps) => {
   useEffect(() => {
     if (colorJson && colorJson !== _colorJson) {
       const _colors = jsonHelper.parse(colorJson);
-      if (_colors) setColors((prev) => ({ ...prev, _colors }));
+
+      if (_colors) {
+        setColors((prev) => ({ ...prev, ...mapHslColor(_colors) }));
+      }
     }
   }, [_colorJson, colorJson]);
 

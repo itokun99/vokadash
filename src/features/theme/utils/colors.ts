@@ -53,3 +53,58 @@ export const convertToRgbArray = (hex: string) => {
   // return `rgb(${r}, ${g}, ${b}, ${alpha})`;
   return [r, g, b];
 };
+
+export function hexToHSL(hex: string): string {
+  // Remove the hash symbol if present
+  hex = hex.replace(/^#/, "");
+
+  // Convert 3-digit hex to 6-digit
+  if (hex.length === 3) {
+    hex = hex
+      .split("")
+      .map((hexChar) => hexChar + hexChar)
+      .join("");
+  }
+
+  // Parse the hex values for red, green, and blue
+  const r = parseInt(hex.substring(0, 2), 16) / 255;
+  const g = parseInt(hex.substring(2, 4), 16) / 255;
+  const b = parseInt(hex.substring(4, 6), 16) / 255;
+
+  // Find the minimum and maximum values among the RGB values
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const delta = max - min;
+
+  // Calculate luminance
+  let h = 0;
+  let s = 0;
+  const l = (max + min) / 2;
+
+  if (delta !== 0) {
+    // Calculate saturation
+    s = l > 0.5 ? delta / (2 - max - min) : delta / (max + min);
+
+    // Calculate hue
+    switch (max) {
+      case r:
+        h = (g - b) / delta + (g < b ? 6 : 0);
+        break;
+      case g:
+        h = (b - r) / delta + 2;
+        break;
+      case b:
+        h = (r - g) / delta + 4;
+        break;
+    }
+    h /= 6;
+  }
+
+  // Convert hue to degrees, saturation, and luminance to percentages
+  const hDegrees = Math.round(h * 360);
+  const sPercent = Math.round(s * 100);
+  const lPercent = Math.round(l * 100);
+
+  // Return the HSL string in the format suitable for CSS
+  return `${hDegrees} ${sPercent}% ${lPercent}%`;
+}
