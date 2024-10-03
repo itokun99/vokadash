@@ -48,7 +48,7 @@ export const DashboardLayout = React.memo(
             </div>
             <UserMenu menus={usermenus} />
           </header>
-          <main className="sidebar-layout-main flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
+          <main className="sidebar-layout-main max-h-[100vh - 56px] overflow-y-auto flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
             {children}
           </main>
         </div>
