@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { RootView } from "./views/root";
 import { AuthLayout } from "@/features/auth";
-import { Button, DashboardPageLayout, Vokadash } from "@/index";
+import { Button, DashboardPageLayout, Input, Vokadash } from "@/index";
 // import { useToast } from "@/features/_global/libs/shadcn/hooks/use-toast";
 
 const Dashboard = () => {
@@ -25,7 +25,9 @@ const Dashboard = () => {
         { label: "Test", url: "/test" },
       ]}
     >
+      <Button variant="outline-dark">Test</Button>
       <Button variant="outline">Test</Button>
+      <Input type="test" />
     </DashboardPageLayout>
   );
 };
