@@ -62,6 +62,16 @@
     @apply border-border;
   }
   body {
+    overflow: hidden;
+
     @apply bg-background text-foreground;
+  }
+
+  .root {
+    overflow: hidden;
+  }
+
+  .sidebar-layout-main {
+    max-height: calc(100vh - 56px);
   }
 }

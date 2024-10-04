@@ -28,6 +28,7 @@ const Dashboard = () => {
       <Button variant="outline-dark">Test</Button>
       <Button variant="outline">Test</Button>
       <Input type="test" />
+      <div className="h-[2000px]" />
     </DashboardPageLayout>
   );
 };
