@@ -1,6 +1,6 @@
 {
   "name": "@itokun99/vokadash",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "description": "Vokadash Admin App Scaffold",
   "homepage": "https://github/itokun99/vokadash",
   "author": "Indrawan Lisanto <indrawanlisantopersonal@gmail.com> (https://github.com/itokun99/vokadash)",
@@ -46,6 +46,7 @@
     "@radix-ui/react-menubar": "^1.1.1",
     "@radix-ui/react-popover": "^1.1.1",
     "@radix-ui/react-radio-group": "^1.2.0",
+    "@radix-ui/react-scroll-area": "1.2.0",
     "@radix-ui/react-select": "^2.1.1",
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
