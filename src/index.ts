@@ -1,3 +1,5 @@
+import * as LucidIcons from "lucide-react";
+import * as RadixIcons from "@radix-ui/react-icons";
 export * from "@tanstack/react-query";
 export * from "class-variance-authority";
 export * from "react-helmet-async";
@@ -7,3 +9,5 @@ export * from "@/features/auth";
 export * from "@/features/theme";
 export * from "@/features/notfound";
 export * from "@/entry";
+export * from "date-fns";
+export { LucidIcons, RadixIcons };

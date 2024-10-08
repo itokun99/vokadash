@@ -3,16 +3,25 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { RootView } from "./views/root";
 import { AuthLayout } from "@/features/auth";
-import { Button, DashboardPageLayout, Input, Vokadash } from "@/index";
+import {
+  Button,
+  DashboardPageLayout,
+  Input,
+  Select,
+  SelectLabel,
+  useToast,
+  Vokadash,
+} from "@/index";
 // import { useToast } from "@/features/_global/libs/shadcn/hooks/use-toast";
 
 const Dashboard = () => {
-  // const toaster = useToast();
+  const { toast } = useToast();
 
   // useEffect(() => {
   //   setInterval(() => {
-  //     toaster.toast({
+  //     toast({
   //       title: "Test",
+  //       variant: "danger",
   //       description: "ini toast dari toaster",
   //     });
   //   }, 2000);
@@ -29,6 +38,9 @@ const Dashboard = () => {
       <Button variant="outline">Test</Button>
       <Input type="test" />
       <div className="h-[2000px]" />
+      <Select>
+        <SelectLabel>Test</SelectLabel>
+      </Select>
     </DashboardPageLayout>
   );
 };
