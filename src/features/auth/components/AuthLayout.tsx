@@ -1,4 +1,5 @@
 import React, { PropsWithChildren } from "react";
+import { IMAGES } from "@/core/assets";
 
 const bg =
   "https://images.unsplash.com/photo-1490642914619-7955a3fd483c?q=80&w=2093&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -18,8 +19,19 @@ export const AuthLayout = ({
   logo,
 }: AuthLayoutProps) => {
   return (
-    <div className="w-full lg:grid lg:grid-cols-2 min-h-screen ">
-      <div className="flex items-center justify-center py-12">
+    <div className="relative w-full lg:grid lg:grid-cols-2 min-h-screen">
+      <div className="">
+        <img
+          src={IMAGES.imgWave}
+          alt=""
+          className="absolute bottom-0 flex justify-end align-bottom  min-w-full"
+          style={{
+            height: "60vh",
+            objectFit: "cover",
+          }}
+        />
+      </div>
+      <div className="relative z-10 flex min-h-screen items-center justify-center py-12">
         <div className="mx-auto grid w-[350px] gap-6 px-4">
           {logo && (
             <div className="w-full flex-1">

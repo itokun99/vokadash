@@ -7,6 +7,7 @@ import {
   Button,
   DashboardPageLayout,
   Input,
+  InputSecure,
   Select,
   SelectLabel,
   useToast,
@@ -33,15 +34,7 @@ const Dashboard = () => {
         { label: "Manajemen Absensi", url: "/" },
         { label: "Test", url: "/test" },
       ]}
-    >
-      <Button variant="outline-dark">Test</Button>
-      <Button variant="outline">Test</Button>
-      <Input type="test" />
-      <div className="h-[2000px]" />
-      <Select>
-        <SelectLabel>Test</SelectLabel>
-      </Select>
-    </DashboardPageLayout>
+    ></DashboardPageLayout>
   );
 };
 
@@ -62,7 +55,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <AuthLayout logo="test" />,
+    element: (
+      <AuthLayout logo="https://sani.sanivokasi.com/assets/logo-D_EHmfqj.png">
+        <div>
+          <InputSecure />
+        </div>
+      </AuthLayout>
+    ),
   },
 ]);
 
