@@ -4,6 +4,7 @@ import {
   DashboardLayoutProps,
   Toaster,
   VokadashContext,
+  VokadashHelmetProvider,
   VokadashQueryProvider,
 } from "@/features/_global";
 import { RawColors, ThemeProvider } from "@/features/theme";
@@ -30,8 +31,10 @@ VokadashWithContext.displayName = "VokadashWithContext";
 
 export const Vokadash = React.memo((props: VokadashProps) => {
   return (
-    <VokadashQueryProvider>
-      <VokadashWithContext {...props} />
-    </VokadashQueryProvider>
+    <VokadashHelmetProvider>
+      <VokadashQueryProvider>
+        <VokadashWithContext {...props} />
+      </VokadashQueryProvider>
+    </VokadashHelmetProvider>
   );
 });
