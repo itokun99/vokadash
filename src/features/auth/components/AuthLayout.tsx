@@ -19,19 +19,19 @@ export const AuthLayout = ({
   logo,
 }: AuthLayoutProps) => {
   return (
-    <div className="relative w-full lg:grid lg:grid-cols-2 min-h-screen">
-      <div className="">
+    <div className="relative w-full lg:grid lg:grid-cols-2 min-h-[100svh]">
+      <div className="sm:hidden">
         <img
           src={IMAGES.imgWave}
           alt=""
-          className="absolute bottom-0 flex justify-end align-bottom  min-w-full"
+          className="absolute  bottom-0 flex justify-end align-bottom  min-w-full"
           style={{
             height: "60vh",
             objectFit: "cover",
           }}
         />
       </div>
-      <div className="relative z-10 flex min-h-screen items-center justify-center py-12">
+      <div className="relative z-10 flex min-h-[100svh] items-center justify-center py-12">
         <div className="mx-auto grid w-[350px] gap-6 px-4">
           {logo && (
             <div className="w-full flex-1">
@@ -39,10 +39,17 @@ export const AuthLayout = ({
             </div>
           )}
 
-          <div className="grid gap-2 text-center">
-            <h1 className="text-3xl font-bold">{title}</h1>
-            <p className="text-balance text-muted-foreground">{description}</p>
-          </div>
+          {(title || description) && (
+            <div className="grid gap-2 text-center">
+              {title && <h1 className="text-3xl font-bold">{title}</h1>}
+              {description && (
+                <p className="text-balance text-muted-foreground">
+                  {description}
+                </p>
+              )}
+            </div>
+          )}
+
           {children}
         </div>
       </div>

@@ -8,7 +8,7 @@ export interface Default404Props {
 
 export const Default404 = (props: Default404Props) => {
   return (
-    <div className="p-8 flex flex-col items-center justify-center min-h-screen  text-muted-foreground">
+    <div className="p-8 flex flex-col items-center justify-center min-h-[100svh]  text-muted-foreground">
       <div className="text-center">
         <h1 className="text-9xl font-extrabold tracking-tight mb-4">404</h1>
         <p className="text-2xl font-light mb-8">

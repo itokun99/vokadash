@@ -12,6 +12,7 @@ import {
   SelectLabel,
   useToast,
   Vokadash,
+  Textarea,
 } from "@/index";
 // import { useToast } from "@/features/_global/libs/shadcn/hooks/use-toast";
 
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
     element: (
       <AuthLayout logo="https://sani.sanivokasi.com/assets/logo-D_EHmfqj.png">
         <div>
-          <InputSecure />
+          <Textarea />
         </div>
       </AuthLayout>
     ),

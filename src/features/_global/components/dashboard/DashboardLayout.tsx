@@ -17,7 +17,7 @@ export const DashboardLayout = React.memo(
     const [sidebarVisible, setSidebarVisible] = useState(false);
 
     return (
-      <div className="dashboard-layout grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
+      <div className="dashboard-layout grid min-h-[100svh] w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
         <Sidebar.Default menus={menus} className={props.sidebarClassName} />
         <div className="sidebar-content flex flex-col overflow-auto">
           <header
