@@ -20,7 +20,14 @@ export interface Option {
   /** fixed option that can't be removed. */
   fixed?: boolean;
   /** Group the options by providing key. */
-  [key: string]: string | boolean | undefined;
+  [key: string]:
+    | number
+    | string
+    | boolean
+    | undefined
+    | object
+    | unknown
+    | null;
 }
 interface GroupOption {
   [key: string]: Option[];
