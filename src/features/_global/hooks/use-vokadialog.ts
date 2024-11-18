@@ -6,11 +6,11 @@ export interface UseVokadialogProps {
   onVisibleChange?: (visible?: boolean) => void;
 }
 
-export const useVokadialog = (props: UseVokadialogProps) => {
+export const useVokadialog = (props?: UseVokadialogProps) => {
   const [ready, setReady] = useState(false);
   const [visible, setVisible] = useState(false);
-  const onVisibleChangeFunc = useRef(props.onVisibleChange);
-  onVisibleChangeFunc.current = props.onVisibleChange;
+  const onVisibleChangeFunc = useRef(props?.onVisibleChange);
+  onVisibleChangeFunc.current = props?.onVisibleChange;
 
   const open = useCallback(() => {
     setVisible(true);
@@ -19,7 +19,7 @@ export const useVokadialog = (props: UseVokadialogProps) => {
 
   const close = useCallback(() => {
     setVisible(false);
-    props.onDialogClose?.();
+    props?.onDialogClose?.();
   }, [props]);
 
   useEffect(() => {
@@ -35,6 +35,7 @@ export const useVokadialog = (props: UseVokadialogProps) => {
   return {
     open,
     close,
+    setVisible,
     visible,
   };
 };
