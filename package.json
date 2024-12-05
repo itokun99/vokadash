@@ -1,6 +1,6 @@
 {
   "name": "@itokun99/vokadash",
-  "version": "0.0.50",
+  "version": "0.0.51",
   "description": "Vokadash Admin App Scaffold",
   "homepage": "https://github/itokun99/vokadash",
   "author": "Indrawan Lisanto <indrawanlisantopersonal@gmail.com> (https://github.com/itokun99/vokadash)",
@@ -60,6 +60,7 @@
     "clsx": "^2.1.1",
     "cmdk": "1.0.0",
     "date-fns": "^3.6.0",
+    "input-otp": "^1.4.1",
     "lucide-react": "^0.439.0",
     "next-themes": "^0.3.0",
     "react-day-picker": "8.10.1",
