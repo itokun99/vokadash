@@ -1,6 +1,6 @@
 {
   "name": "@itokun99/vokadash",
-  "version": "0.0.57",
+  "version": "0.0.58",
   "description": "Vokadash Admin App Scaffold",
   "homepage": "https://github/itokun99/vokadash",
   "author": "Indrawan Lisanto <indrawanlisantopersonal@gmail.com> (https://github.com/itokun99/vokadash)",
@@ -56,7 +56,6 @@
     "@radix-ui/react-toggle": "^1.1.1",
     "@radix-ui/react-tooltip": "^1.1.6",
     "@tanstack/react-query": "^5.62.8",
-    "@tanstack/react-table": "^8.20.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.0",
