@@ -14,6 +14,7 @@ export interface NavProps {
   mobile?: boolean;
   items: NavItemProps[];
   className?: string;
+  isChild?: boolean;
 }
 
 export interface SidebarProps {

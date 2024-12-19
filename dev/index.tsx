@@ -110,8 +110,20 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           },
           {
             title: "Kehadiran",
-            url: "/attendance",
+            url: "",
             icon: "UserPen",
+            items: [
+              {
+                title: "Kehadiran",
+                url: "/attendance",
+                icon: "UserPen",
+              },
+              {
+                title: "Kehadiran",
+                url: "/attendance",
+                icon: "UserPen",
+              },
+            ],
           },
           {
             title: "Cuti",
