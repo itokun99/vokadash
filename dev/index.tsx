@@ -1,34 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { RootView } from "./views/root";
 import { AuthLayout } from "@/features/auth";
 import {
-  Button,
   DashboardPageLayout,
-  Input,
-  InputSecure,
-  Select,
-  SelectLabel,
   useToast,
   Vokadash,
   Textarea,
   MultipleSelector,
 } from "@/index";
-// import { useToast } from "@/features/_global/libs/shadcn/hooks/use-toast";
 
 const Dashboard = () => {
-  const { toast } = useToast();
-
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     toast({
-  //       title: "Test",
-  //       variant: "danger",
-  //       description: "ini toast dari toaster",
-  //     });
-  //   }, 2000);
-  // });
   return (
     <DashboardPageLayout
       title="test"
