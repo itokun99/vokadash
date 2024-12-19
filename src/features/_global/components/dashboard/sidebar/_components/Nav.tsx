@@ -1,15 +1,15 @@
 import { cn } from "@/features/_global/libs/shadcn/lib/utils";
 import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/features/_global/libs/shadcn/components/ui/accordion";
+// import {
+//   Accordion,
+//   AccordionContent,
+//   AccordionItem,
+//   AccordionTrigger,
+// } from "@/features/_global/libs/shadcn/components/ui/accordion";
 import { NavItemProps, NavProps } from "../types";
 import { Icon, SidebarContext } from "@/features/_global";
-import { ArrowDown, ArrowUp, ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 
 const NavItem = React.memo((props: NavItemProps) => {
   const [visibleChild, setVisibleChild] = useState(false);

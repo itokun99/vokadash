@@ -29,7 +29,8 @@ import {
 
 import {
   ColumnDef,
-  ColumnFiltersState,
+  ColumnFilter,
+  // ColumnFiltersState,
   InitialTableState,
   PaginationState,
   RowData,
@@ -64,9 +65,13 @@ export interface BaseDataTableFilterValueItem {
   value: string | number;
 }
 
-interface ColFilter extends ColumnFiltersState {
-  label: string;
+interface ColumnFilterImproved extends ColumnFilter {
+  label?: string;
 }
+
+type ColumnFiltersStateImproved = ColumnFilterImproved[];
+
+type ColFilter = ColumnFiltersStateImproved;
 
 export interface VokaDataTableProps {
   columns: ColumnDef<any, any>[];
@@ -313,7 +318,7 @@ export const VokaDataTable = ({
                       <Label>{filterLabel}</Label>
                       <Input
                         value={String(columnFilterValue || "")}
-                        onChange={(v) => {}}
+                        // onChange={(v) => {}}
                         type="text"
                         placeholder={filterPlaceholder}
                       />
