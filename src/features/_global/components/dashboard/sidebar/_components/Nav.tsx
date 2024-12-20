@@ -1,12 +1,6 @@
 import { cn } from "@/features/_global/libs/shadcn/lib/utils";
 import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
-// import {
-//   Accordion,
-//   AccordionContent,
-//   AccordionItem,
-//   AccordionTrigger,
-// } from "@/features/_global/libs/shadcn/components/ui/accordion";
 import { NavItemProps, NavProps } from "../types";
 import { Icon, SidebarContext } from "@/features/_global";
 import { ChevronDown, ChevronRight } from "lucide-react";
@@ -133,18 +127,6 @@ export const Nav = React.memo(
         })}
       </ul>
     );
-    // return (
-    //   <Accordion
-    //     type="single"
-    //     collapsible
-    //     className="sidebar-nav grid w-full items-start text-sm font-medium sm:px-4"
-    //     defaultValue="0"
-    //   >
-    //     {items?.map((item, i) => {
-    //       return <NavItem {...item} key={i} value={i} mobile={mobile} />;
-    //     })}
-    //   </Accordion>
-    // );
   },
 );
 
