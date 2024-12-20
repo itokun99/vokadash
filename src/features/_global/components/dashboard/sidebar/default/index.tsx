@@ -15,7 +15,9 @@ export const DefaultSidebar = React.memo((props: SidebarProps) => {
     >
       <div className=" sidebar-content flex h-full max-h-screen flex-col gap-2">
         <Brand />
-        <Nav items={props.menus} />
+        <div className="px-4 overflow-y-auto py-2">
+          <Nav items={props.menus} />
+        </div>
       </div>
     </div>
   );
